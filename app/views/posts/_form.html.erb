@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :schooltype, 'タイプ' %>
-    <%= f.collection_select :schooltype, Schooltype.all, :schooltype, :schooltype%>
+    <%= f.collection_select :schooltype, Schooltype.all, :schooltype, :schooltype %>
   </div>
 
   <div class="field">
@@ -22,8 +22,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :body, '内容' %>
-    <%= f.text_area :body %>
+    <%= f.label :body, '内容（200文字まで）' %>
+    <%= f.text_area :body, :maxlength => "200", :size => "40*30" %>
   </div>
 
   <div class="field">
@@ -32,7 +32,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :address, '住所' %>
+    <%= f.label :address, '所在地' %>
     <%= f.text_field :address %>
   </div>
 
