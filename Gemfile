@@ -23,6 +23,7 @@ gem 'therubyracer', platforms: :ruby
 
 gem 'carrierwave'
 gem 'rmagick'
+gem 'fog'
 
 gem 'kaminari'
 
