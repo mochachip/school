@@ -13,12 +13,12 @@
 ActiveRecord::Schema.define(version: 20170305034504) do
 
   create_table "comments", force: :cascade do |t|
-    t.integer  "article_id"
+    t.integer  "post_id"
     t.string   "from"
     t.text     "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["article_id"], name: "index_comments_on_article_id"
+    t.index ["post_id"], name: "index_comments_on_post_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 20170305034504) do
     t.string   "url"
     t.integer  "postcode"
     t.string   "address"
-    t.string   "stype"
     t.string   "schooltype"
   end
 
