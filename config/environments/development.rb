@@ -33,7 +33,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     :address => 'smtp.gmail.com',
     :port => 587,
-    :domain => 'smtp.gmail.com',
+    :domain => 'gmail.com',
     :user_name => ENV['MAIL_USER_NAME'],
     :password => ENV['MAIL_PASSWARD'], # Googleが発行する、12桁のアプリケーションパスワード
     :authentication => :plain,
