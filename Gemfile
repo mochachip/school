@@ -32,6 +32,7 @@ gem 'acts-as-taggable-on'
 gem 'ransack'
 
 gem 'devise'
+gem 'dotenv-rails'
 
 gem 'autoprefixer-rails'
 gem 'bootswatch-rails'

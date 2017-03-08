@@ -34,8 +34,8 @@ Rails.application.configure do
     :address => 'smtp.gmail.com',
     :port => 587,
     :domain => 'smtp.gmail.com',
-    :user_name => 'aiitagaki128@gmail.com',
-    :password => 'flgfqihhgymhlhsn', # Googleが発行する、12桁のアプリケーションパスワード
+    :user_name => ENV['USER_NAME'],
+    :password => ENV['PASSWARD'], # Googleが発行する、12桁のアプリケーションパスワード
     :authentication => :plain,
     :enable_starttls_auto => true
   }
