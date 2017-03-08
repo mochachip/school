@@ -6,15 +6,16 @@
 
   <%= search_form_for @q do |f| %>
     <div class="field">
-    <%= f.label :schooltype_eq, "スクールタイプ 　" %>
-    <%= f.collection_select :schooltype_eq, Schooltype.all, :schooltype, :schooltype, :include_blank => '指定なし' %>
-    <br>
-    <%= f.label :title_or_body_cont, "スクール名or内容" %>
-    <%= f.search_field :title_or_body_cont %>
-    <br>
-    <%= f.label :address_cont, "所在地 (市区町村)" %>
-    <%= f.search_field :address_cont %>
-    <%= f.submit %>
+      <label><%= f.radio_button :schooltype_eq, "単発" %>単発</label>
+      <label><%= f.radio_button :schooltype_eq, "連続" %>連続</label>
+      <label><%= f.radio_button :schooltype_eq, "単発＆連続" %>単発＆連続</label>
+      <br>
+      <%= f.label :title_or_body_cont, "スクール名or内容" %>
+      <%= f.search_field :title_or_body_cont %>
+      <br>
+      <%= f.label :address_cont, "所在地 (市区町村)" %>
+      <%= f.search_field :address_cont %>
+      <%= f.submit %>
     <br>
     </div>
   <% end %> 

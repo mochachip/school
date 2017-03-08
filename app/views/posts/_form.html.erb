@@ -10,12 +10,9 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :schooltype, 'スクールタイプ' %>
-    <%= f.collection_select :schooltype, Schooltype.all, :schooltype, :schooltype %>
-  </div>
-
+  <label><%= f.radio_button :schooltype, "単発" %>単発</label>
+  <label><%= f.radio_button :schooltype, "連続" %>連続</label>
+  <label><%= f.radio_button :schooltype, "単発＆連続" %>単発＆連続</label>
   <div class="field">
     <%= f.label :title, 'スクール名' %>
     <%= f.text_field :title %>
